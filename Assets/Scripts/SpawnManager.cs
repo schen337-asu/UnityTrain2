@@ -10,13 +10,14 @@ public class SpawnManager : MonoBehaviour
 
     // set start delay on the class beginning method routine to spawn animals and the rate of spawn
     private float startDelay = 2;
-    private float spawnInterval = 1.5f;
+    private float spawnInterval;
 
 
     public int animalIndex;
     // Start is called before the first frame update
     void Start()
     {
+        spawnInterval = Random.Range(3, 5);
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 

@@ -18,8 +18,7 @@ public class PlayerController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-    }
+    {}
 
     // Update is called once per frame
     void Update()
@@ -36,7 +35,7 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) )
         {
             // launch a projectile from the player
             Instantiate(foodPrefab, transform.position, foodPrefab.transform.rotation);
